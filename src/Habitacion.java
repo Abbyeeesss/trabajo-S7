@@ -10,6 +10,7 @@ public class Habitacion {
         this.descripcion = descripcion;
     }
     public String toString() {
-        return "Habitacion{" + "id=" + id + ", descripcion='" + descripcion + '\'' + '}';
+        return
+                "\nHabitacion:" + "\nid:" + id + "\ndescripcion:" + descripcion;
     }
 }

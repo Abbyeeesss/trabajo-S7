@@ -13,10 +13,6 @@ public class Reserva {
     }
 
     public String toString() {
-        return "Reserva{" +
-                "id=" + id +
-                ", habitacionId=" + habitacionId +
-                ", clienteId=" + clienteId +
-                '}';
+        return "\nReserva"+ "id:" + id + "\nhabitacionId:" + habitacionId + "\nclienteId:" + clienteId;
     }
 }

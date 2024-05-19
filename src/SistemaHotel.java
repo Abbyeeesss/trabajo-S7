@@ -13,7 +13,7 @@ public class SistemaHotel {
         int opcion;
 
         do {
-            System.out.println("Menu de opciones:");
+            System.out.println("\n-------Menu--------");
             System.out.println("1. Habitaciones");
             System.out.println("2. Clientes");
             System.out.println("3. Reservas");
@@ -47,7 +47,7 @@ public class SistemaHotel {
     static void menuHabitaciones() {
         int opcion;
         do {
-            System.out.println("\nMenu Habitaciones:");
+            System.out.println("\n------Menu Habitaciones------");
             System.out.println("1. Crear");
             System.out.println("2. Leer");
             System.out.println("3. Actualizar");
@@ -70,7 +70,6 @@ public class SistemaHotel {
                     eliminarHabitacion();
                     break;
                 case 5:
-                    System.out.println("Volviendo al menu principal...");
                     break;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
@@ -81,7 +80,7 @@ public class SistemaHotel {
     static void menuClientes() {
         int opcion;
         do {
-            System.out.println("\nMenu Clientes:");
+            System.out.println("\n-------Menu Clientes-------");
             System.out.println("1. Crear");
             System.out.println("2. Leer");
             System.out.println("3. Actualizar");
@@ -104,7 +103,6 @@ public class SistemaHotel {
                     eliminarCliente();
                     break;
                 case 5:
-                    System.out.println("Volviendo al menu principal...");
                     break;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
@@ -115,7 +113,7 @@ public class SistemaHotel {
     static void menuReservas() {
         int opcion;
         do {
-            System.out.println("\nMenu Reservas:");
+            System.out.println("\n------Menu Reservas------");
             System.out.println("1. Crear");
             System.out.println("2. Leer");
             System.out.println("3. Actualizar");
@@ -138,7 +136,6 @@ public class SistemaHotel {
                     eliminarReserva();
                     break;
                 case 5:
-                    System.out.println("Volviendo al menu principal...");
                     break;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
@@ -149,7 +146,7 @@ public class SistemaHotel {
     static void menuEmpleados() {
         int opcion;
         do {
-            System.out.println("\nMenu Empleados:");
+            System.out.println("\n------Menu Empleados------");
             System.out.println("1. Crear");
             System.out.println("2. Leer");
             System.out.println("3. Actualizar");
@@ -172,7 +169,6 @@ public class SistemaHotel {
                     eliminarEmpleado();
                     break;
                 case 5:
-                    System.out.println("Volviendo al menu principal...");
                     break;
                 default:
                     System.out.println("Opción no válida. Intente nuevamente.");
@@ -182,9 +178,9 @@ public class SistemaHotel {
 
     // Métodos CRUD para Habitaciones
     static void crearHabitacion() {
-        System.out.print("Ingrese ID de la habitación: ");
+        System.out.print("\nIngrese ID de la habitación: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Ingrese descripción de la habitación: ");
         String descripcion = scanner.nextLine();
         habitaciones.add(new Habitacion(id, descripcion));
@@ -192,16 +188,16 @@ public class SistemaHotel {
     }
 
     static void leerHabitaciones() {
-        System.out.println("Listado de habitaciones:");
+        System.out.println("----Listado de habitaciones----");
         for (Habitacion hab : habitaciones) {
             System.out.println(hab);
         }
     }
 
     static void actualizarHabitacion() {
-        System.out.print("Ingrese ID de la habitación a actualizar: ");
+        System.out.print("\nIngrese ID de la habitación a actualizar: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         Habitacion habitacion = buscarHabitacion(id);
         if (habitacion != null) {
             System.out.print("Ingrese nueva descripción de la habitación: ");
@@ -214,7 +210,7 @@ public class SistemaHotel {
     }
 
     static void eliminarHabitacion() {
-        System.out.print("Ingrese ID de la habitación a eliminar: ");
+        System.out.print("\nIngrese ID de la habitación a eliminar: ");
         int id = scanner.nextInt();
         Habitacion habitacion = buscarHabitacion(id);
         if (habitacion != null) {
@@ -236,9 +232,9 @@ public class SistemaHotel {
 
     // Métodos CRUD para Clientes
     static void crearCliente() {
-        System.out.print("Ingrese ID del cliente: ");
+        System.out.print("\nIngrese ID del cliente: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Ingrese nombre del cliente: ");
         String nombre = scanner.nextLine();
         clientes.add(new Cliente(id, nombre));
@@ -253,9 +249,9 @@ public class SistemaHotel {
     }
 
     static void actualizarCliente() {
-        System.out.print("Ingrese ID del cliente a actualizar: ");
+        System.out.print("\nIngrese ID del cliente a actualizar: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         Cliente cliente = buscarCliente(id);
         if (cliente != null) {
             System.out.print("Ingrese nuevo nombre del cliente: ");
@@ -268,7 +264,7 @@ public class SistemaHotel {
     }
 
     static void eliminarCliente() {
-        System.out.print("Ingrese ID del cliente a eliminar: ");
+        System.out.print("\nIngrese ID del cliente a eliminar: ");
         int id = scanner.nextInt();
         Cliente cliente = buscarCliente(id);
         if (cliente != null) {
@@ -290,7 +286,7 @@ public class SistemaHotel {
 
     // Métodos CRUD para Reservas
     static void crearReserva() {
-        System.out.print("Ingrese ID de la reserva: ");
+        System.out.print("\nIngrese ID de la reserva: ");
         int id = scanner.nextInt();
         System.out.print("Ingrese ID de la habitación: ");
         int habitacionId = scanner.nextInt();
@@ -308,7 +304,7 @@ public class SistemaHotel {
     }
 
     static void actualizarReserva() {
-        System.out.print("Ingrese ID de la reserva a actualizar: ");
+        System.out.print("\nIngrese ID de la reserva a actualizar: ");
         int id = scanner.nextInt();
         Reserva reserva = buscarReserva(id);
         if (reserva != null) {
@@ -325,7 +321,7 @@ public class SistemaHotel {
     }
 
     static void eliminarReserva() {
-        System.out.print("Ingrese ID de la reserva a eliminar: ");
+        System.out.print("\nIngrese ID de la reserva a eliminar: ");
         int id = scanner.nextInt();
         Reserva reserva = buscarReserva(id);
         if (reserva != null) {
@@ -347,9 +343,9 @@ public class SistemaHotel {
 
     // Métodos CRUD para Empleados
     static void crearEmpleado() {
-        System.out.print("Ingrese ID del empleado: ");
+        System.out.print("\nIngrese ID del empleado: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Ingrese nombre del empleado: ");
         String nombre = scanner.nextLine();
         empleados.add(new Empleado(id, nombre));
@@ -364,12 +360,12 @@ public class SistemaHotel {
     }
 
     static void actualizarEmpleado() {
-        System.out.print("Ingrese ID del empleado a actualizar: ");
+        System.out.print("\nIngrese ID del empleado a actualizar: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         Empleado empleado = buscarEmpleado(id);
         if (empleado != null) {
-            System.out.print("Ingrese nuevo nombre del empleado: ");
+            System.out.print("\nIngrese nuevo nombre del empleado: ");
             String nombre = scanner.nextLine();
             empleado.nombre = nombre;
             System.out.println("Empleado actualizado exitosamente.");
@@ -379,7 +375,7 @@ public class SistemaHotel {
     }
 
     static void eliminarEmpleado() {
-        System.out.print("Ingrese ID del empleado a eliminar: ");
+        System.out.print("\nIngrese ID del empleado a eliminar: ");
         int id = scanner.nextInt();
         Empleado empleado = buscarEmpleado(id);
         if (empleado != null) {

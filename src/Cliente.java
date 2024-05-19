@@ -11,6 +11,6 @@ public class Cliente {
     }
 
     public String toString() {
-        return "Cliente:" + "id=" + id + ", nombre='" + nombre + '\'' + '}';
+        return "\nCliente:" + "\nid:" + id + "\nnombre:'" + nombre;
     }
 }
